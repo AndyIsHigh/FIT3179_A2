@@ -9,7 +9,7 @@
   <div id="vis"/>
   <script>
     const spec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/54f368ef5f68756e95231589b13eda714a07212b/Cost_of_living.csv"},
     "vconcat": [
         {"title": "Highest salaries of data science by countries",
@@ -147,9 +147,9 @@
           "fontWeight": "bold" 
         }}
     }
-    ]
-
-    "config": {}
+    ],
+    
+  "config": {}
 };
     vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
   </script>
