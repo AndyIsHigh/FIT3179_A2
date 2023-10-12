@@ -25,13 +25,12 @@
         "axis": {
           "labelFont": "Arial", 
           "labelFontSize": 14,
-          "titleFontSize": 16,  
-          "labelFontWeight": "normal", 
-          "labelAngle": 0
+          "titleFontSize": 16,
+          "labelFontWeight": "normal" 
         },
         "title": {
           "font": "Arial", 
-          "fontSize": 21,   
+          "fontSize": 21,
           "fontWeight": "bold" 
         }}
     }
