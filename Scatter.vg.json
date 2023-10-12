@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 530,
+    "width": 495,
     "height": 400,
     "background": "ghostwhite",
     "title": { "text": "House price per meter square vs Average montly net salary" },

@@ -3,9 +3,9 @@
     "width": 800,
     "height": 400,
     "background": "ghostwhite",
-    "title": { "text": "Average net salary by countries" },
+    "title": { "text": "City that people could buy a house in 50 years of working" },
     "data": {
-      "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/54f368ef5f68756e95231589b13eda714a07212b/Cost_of_living.csv"
+      "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/main/Cost_of_living.csv"
     },
     "mark": { "type": "bar", "size": 80, "color": "orange" },
     "transform": [
@@ -13,7 +13,7 @@
         "calculate": "datum.Apt_Center * 1950 / (datum.Average_monthly_net_salary - datum.in_monthly_approx_spend)",
         "as": "num"
       },
-      {"filter": "datum.num < 1000"}
+      {"filter": "datum.num >= 1 && datum.num <= 600"}
     ],
     "encoding": {
       "x": { "field": "City", "type": "nominal", "title": "Cities", "sort": "descending" },

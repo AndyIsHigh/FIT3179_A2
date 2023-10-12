@@ -32,7 +32,10 @@
     <div class="pure-g">
       <div class="pure-u-1-1">
         <h1>How Much is Enough?</h1>
-        <p>This page demonstrates how you can use pure.css grid for your layout.</p>
+        <p>This visualization presents a global overview of living costs, with a focus on identifying cities that offer economic advantages. 
+            By analyzing average net salaries in various locations, it offers valuable insights for individuals, businesses, and researchers. 
+            This user-friendly tool equips the audience with data-driven information to make informed decisions regarding their economic interests and opportunities.
+        </p>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -43,7 +46,11 @@
         <div class="description description-rigth">
           <h2>A Peek of Living cost through McMeal Price</h2>
           <p> 
-            pure-u-1-2
+            Although the price of a McDonald's meal is not a perfect measure of living costs, 
+            <br>
+            it can serve as a quick and simple way to make rough comparisons between locations. 
+            <br>
+            It's an accessible and relatable indicator that can provide a general sense of the cost of living in different places, especially when considered alongside other economic factors.
          </p>
         </div>
       </div>
@@ -52,9 +59,8 @@
       </div>
       <div class="pure-u-1-4">
         <div class="description description-rigth">
-          <h2>A Peek of Living cost through McMeal Price</h2>
           <p> 
-            pure-u-1-2
+            place holder for description
          </p>
         </div>
     </div>
@@ -64,9 +70,9 @@
     <div class="pure-g">
         <div class="pure-u-1-4">
           <div class="description description-rigth">
-            <h2>A Peek of Living cost through McMeal Price</h2>
+            <h2>Does the house price grows with salary?</h2>
             <p> 
-              pure-u-1-2
+                place holder for description
            </p>
           </div>
         </div>
@@ -75,9 +81,8 @@
         </div>
         <div class="pure-u-1-4">
           <div class="description description-rigth">
-            <h2>A Peek of Living cost through McMeal Price</h2>
             <p> 
-              pure-u-1-2
+                place holder for description
            </p>
           </div>
       </div>
@@ -97,15 +102,28 @@
       </div>
       <div class="pure-u-1-3">
         <div class="description description-right">
-          <h2>First and Second Columns Combined</h2>
-          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+          <h2>Place holder</h2>
+          <p>Place holder</p>
         </div>
       </div>
 
     </div>
     <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis3" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+            <h2>Place holder</h2>
+            <p>Place holder</p>
+          </div>
+        </div>
+  
+      </div>
+      <!-- end pure grid group -->
 
     <div class="pure-g">
       <div class="pure-u-1-1 small-font">
@@ -120,6 +138,7 @@
     var specVis1 = "./Map.vg.json";
     var specVis2 = "./Scatter.vg.json";
     var specVis3 = "./boxplot.vg.json"
+    var specVis4 = "./barplot.vg.json"
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
@@ -127,7 +146,7 @@
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
-    vegaEmbed('#vis3', specVis1, { "actions": false }).then(function (result) {
+    vegaEmbed('#vis3', specVis4, { "actions": false }).then(function (result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 
