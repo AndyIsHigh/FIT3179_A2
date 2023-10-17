@@ -34,7 +34,7 @@
             "lookup": "properties.NAME",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/26c0ab901150242ed6ef9917b9f70c886a77b18c/Assignment2.csv"
+                "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/main/living_cost.csv"
               },
               "key": "company_location",
               "fields": ["salary_in_usd"]

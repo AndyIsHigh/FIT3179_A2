@@ -35,7 +35,7 @@
             "lookup": "properties.NAME",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/54f368ef5f68756e95231589b13eda714a07212b/Cost_of_living.csv"
+                "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/main/living_cost.csv"
               },
               "key": "Country",
               "fields": ["McMeal"]
