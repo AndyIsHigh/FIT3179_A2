@@ -127,7 +127,7 @@
           "baseline": "middle",
           "dx": 0,
           "dy": 13,
-          "fontSize": 11,
+          "fontSize": 13,
           "fontWeight": "bold",
           "fill":"navy"
         },
@@ -137,5 +137,11 @@
           "text": { "field": "label", "type": "nominal" }
         }
       }
-    ]
+    ],
+    "config": {
+      "title": {
+        "font": "Arial", 
+        "fontSize": 21,   
+        "fontWeight": "bold" 
+      }}
   }

@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
+    "width": 650,
     "height": 400,
     "background": "ghostwhite",
     "title": { "text": "Average net salary in Top 5 Highes GDP Countries (2023)" },
@@ -9,14 +9,14 @@
     },
     "mark": {"type": "boxplot", "size": 80, "color": "orange"},
     "encoding": {
-    "x": { "field": "Country", "type": "nominal", "title": "Countries", "sort": "descending"},
+    "x": { "field": "Country", "type": "nominal", "title": "Countries", "sort": "y"},
     "y": {"field": "Average monthly net salary", 
             "type": "quantitative", "title": "Average monthly salary (USD)"},
     "tooltip": [
           {"field": "Country", "type": "nominal"},
           {"field": "City", "type": "nominal"},
           {"field": "Average monthly net salary", 
-            "type": "quantitative"}
+            "type": "quantitative", "format": ".2f"}
         ]
     },
     "transform": [{"filter": {"field": "Country", "oneOf": ["China", "United States", "India", "Japan", "Germany"]}}],
