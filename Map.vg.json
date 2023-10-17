@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "McMeal Price Around the Globe",
     "width": 600,
-    "height": 400,
+    "height": 500,
     "background": "ghostwhite",
     "projection": {
       "type": "equalEarth"
@@ -90,6 +90,51 @@
           "stroke": "black",
           "strokeDash": [1, 2],
           "fill": null
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {
+              "value": "Switzerland",
+              "latitude": 46.8182,
+              "longitude": 8.2275,
+              "label": "Switzerland boasts the distinction of "
+            },
+            {
+              "country": "Switzerland2",
+              "latitude": 40.8182,
+              "longitude": 8.2275,
+              "label": "having the most costly McDonald Meal."
+            },
+            {
+              "country": "Indonesia",
+              "latitude": -3,
+              "longitude": 80.92,
+              "label": "Indonesia is renowned for its "
+            },
+            {
+              "country": "Indonesia2",
+              "latitude": -9,
+              "longitude": 80.92,
+              "label": "exceptionally budget-friendly McDonald Meals."
+            }
+          ]
+        },
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "middle",
+          "dx": 0,
+          "dy": 13,
+          "fontSize": 11,
+          "fontWeight": "bold",
+          "fill":"navy"
+        },
+        "encoding": {
+          "longitude": { "field": "longitude", "type": "quantitative" },
+          "latitude": { "field": "latitude", "type": "quantitative" },
+          "text": { "field": "label", "type": "nominal" }
         }
       }
     ]

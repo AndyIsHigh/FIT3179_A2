@@ -1,91 +1,88 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 400,
-    "height": 400,
-    "background": "ghostwhite",
-    "title": { "text": "House price per meter square vs Average montly net salary" },
-    "data": {
-    "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/54f368ef5f68756e95231589b13eda714a07212b/Cost_of_living.csv"
-    },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "background": "ghostwhite",
+  "title": { "text": "House price per meter square vs Average montly net salary" },
+  "data": {
+  "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/54f368ef5f68756e95231589b13eda714a07212b/Cost_of_living.csv"
+  },
 
-    "params": [{
-      "name": "Country Selection",
-      "select": {"type": "point", "fields": ["Country"]},
-      "bind": {"input": "select", "options": [null, "South Korea", "China", "India", "Bangladesh", "Japan", "Indonesia", "Congo", "Thailand", 
-      "Pakistan", "Egypt", "Brazil", "Mexico", "Nigeria", "Russia", "Philippines", "United States", "Turkey", "Argentina", 
-      "United Kingdom", "Iran", "France", "Vietnam", "Peru", "Angola", "Colombia", "Malaysia", "Hong Kong", "Tanzania", "Chile", 
-      "Saudi Arabia", "Iraq", "Spain", "Sudan", "Kenya", "Canada", "Singapore", "Ivory Coast", "Australia", "South Africa", "Morocco", 
-      "Afghanistan", "Jordan", "Germany", "Algeria", "Ethiopia", "Kuwait", "Yemen", "Italy", "Guatemala", "Ukraine", "Taiwan", "Ecuador", 
-      "Bolivia", "Madagascar", "Dominican Republic", "United Arab Emirates", "Uzbekistan", "Cameroon", "Burkina Faso", "Ghana", "Azerbaijan", 
-      "Cuba", "Zimbabwe", "Cambodia", "Somalia", "Belarus", "Venezuela", "Kazakhstan", "Austria", "Syria", "Romania", "Belgium", "Poland", "Hungary", 
-      "Uganda", "Oman", "Mongolia", "Serbia", "New Zealand", "Czech Republic", "Uruguay", "Bulgaria", "Mozambique", "Qatar", "Senegal", "Rwanda", "Libya", 
-      "Honduras", "Georgia", "Denmark", "Armenia", "Kyrgyzstan", "Mauritania", "Tunisia", "Nepal", "Nicaragua", "Niger", "Liberia", "Sweden", "Israel", "Laos", 
-      "Croatia", "Sri Lanka", "Malawi", "Tajikistan", "Netherlands", "Togo", "Gabon", "Finland", "Panama", "Greece", "Norway", "North Macedonia", "Moldova", "Burundi", 
-      "Latvia", "Jamaica", "Lithuania", "Ireland", "Estonia", "Paraguay", "Portugal", "Lebanon", "Albania", "Slovakia", "Namibia", "Cyprus", "Bahamas", "Slovenia", "Bosnia And Herzegovina", 
-      "Maldives", "Suriname", "Botswana", "Gibraltar", "Papua New Guinea", "Guyana", "Montenegro", "Bahrain", "Switzerland", "Luxembourg", "Iceland", "Fiji", "New Caledonia", "Monaco", "Bhutan", 
-      "Swaziland", "French Guiana", "Bermuda", "Brunei", "Isle Of Man", "Aruba", "Trinidad And Tobago", "Jersey", "Gambia", "Turkmenistan", "Seychelles", "Malta", "Andorra", "Liechtenstein", "San Marino", 
-      "Kosovo (Disputed Territory)", "Sint Maarten", "Mauritius", "El Salvador", "Puerto Rico", "Costa Rica"],
-      "labels":  ["All", "South Korea", "China", "India", "Bangladesh", "Japan", "Indonesia", "Congo", "Thailand", 
-      "Pakistan", "Egypt", "Brazil", "Mexico", "Nigeria", "Russia", "Philippines", "United States", "Turkey", "Argentina", 
-      "United Kingdom", "Iran", "France", "Vietnam", "Peru", "Angola", "Colombia", "Malaysia", "Hong Kong", "Tanzania", "Chile", 
-      "Saudi Arabia", "Iraq", "Spain", "Sudan", "Kenya", "Canada", "Singapore", "Ivory Coast", "Australia", "South Africa", "Morocco", 
-      "Afghanistan", "Jordan", "Germany", "Algeria", "Ethiopia", "Kuwait", "Yemen", "Italy", "Guatemala", "Ukraine", "Taiwan", "Ecuador", 
-      "Bolivia", "Madagascar", "Dominican Republic", "United Arab Emirates", "Uzbekistan", "Cameroon", "Burkina Faso", "Ghana", "Azerbaijan", 
-      "Cuba", "Zimbabwe", "Cambodia", "Somalia", "Belarus", "Venezuela", "Kazakhstan", "Austria", "Syria", "Romania", "Belgium", "Poland", "Hungary", 
-      "Uganda", "Oman", "Mongolia", "Serbia", "New Zealand", "Czech Republic", "Uruguay", "Bulgaria", "Mozambique", "Qatar", "Senegal", "Rwanda", "Libya", 
-      "Honduras", "Georgia", "Denmark", "Armenia", "Kyrgyzstan", "Mauritania", "Tunisia", "Nepal", "Nicaragua", "Niger", "Liberia", "Sweden", "Israel", "Laos", 
-      "Croatia", "Sri Lanka", "Malawi", "Tajikistan", "Netherlands", "Togo", "Gabon", "Finland", "Panama", "Greece", "Norway", "North Macedonia", "Moldova", "Burundi", 
-      "Latvia", "Jamaica", "Lithuania", "Ireland", "Estonia", "Paraguay", "Portugal", "Lebanon", "Albania", "Slovakia", "Namibia", "Cyprus", "Bahamas", "Slovenia", "Bosnia And Herzegovina", 
-      "Maldives", "Suriname", "Botswana", "Gibraltar", "Papua New Guinea", "Guyana", "Montenegro", "Bahrain", "Switzerland", "Luxembourg", "Iceland", "Fiji", "New Caledonia", "Monaco", "Bhutan", 
-      "Swaziland", "French Guiana", "Bermuda", "Brunei", "Isle Of Man", "Aruba", "Trinidad And Tobago", "Jersey", "Gambia", "Turkmenistan", "Seychelles", "Malta", "Andorra", "Liechtenstein", "San Marino", 
-      "Kosovo (Disputed Territory)", "Sint Maarten", "Mauritius", "El Salvador", "Puerto Rico", "Costa Rica"],
-      "name": "Country selection"}
-    }],
+  "params": [{
+    "name": "Country Selection",
+    "select": {"type": "point", "fields": ["Country"]},
+    "bind": {"input": "select", "options": [null, "South Korea", "China", "India", "Bangladesh", "Japan", "Indonesia", "Congo", "Thailand", 
+    "Pakistan", "Egypt", "Brazil", "Mexico", "Nigeria", "Russia", "Philippines", "United States", "Turkey", "Argentina", 
+    "United Kingdom", "Iran", "France", "Vietnam", "Peru", "Angola", "Colombia", "Malaysia", "Hong Kong", "Tanzania", "Chile", 
+    "Saudi Arabia", "Iraq", "Spain", "Sudan", "Kenya", "Canada", "Singapore", "Ivory Coast", "Australia", "South Africa", "Morocco", 
+    "Afghanistan", "Jordan", "Germany", "Algeria", "Ethiopia", "Kuwait", "Yemen", "Italy", "Guatemala", "Ukraine", "Taiwan", "Ecuador", 
+    "Bolivia", "Madagascar", "Dominican Republic", "United Arab Emirates", "Uzbekistan", "Cameroon", "Burkina Faso", "Ghana", "Azerbaijan", 
+    "Cuba", "Zimbabwe", "Cambodia", "Somalia", "Belarus", "Venezuela", "Kazakhstan", "Austria", "Syria", "Romania", "Belgium", "Poland", "Hungary", 
+    "Uganda", "Oman", "Mongolia", "Serbia", "New Zealand", "Czech Republic", "Uruguay", "Bulgaria", "Mozambique", "Qatar", "Senegal", "Rwanda", "Libya", 
+    "Honduras", "Georgia", "Denmark", "Armenia", "Kyrgyzstan", "Mauritania", "Tunisia", "Nepal", "Nicaragua", "Niger", "Liberia", "Sweden", "Israel", "Laos", 
+    "Croatia", "Sri Lanka", "Malawi", "Tajikistan", "Netherlands", "Togo", "Gabon", "Finland", "Panama", "Greece", "Norway", "North Macedonia", "Moldova", "Burundi", 
+    "Latvia", "Jamaica", "Lithuania", "Ireland", "Estonia", "Paraguay", "Portugal", "Lebanon", "Albania", "Slovakia", "Namibia", "Cyprus", "Bahamas", "Slovenia", "Bosnia And Herzegovina", 
+    "Maldives", "Suriname", "Botswana", "Gibraltar", "Papua New Guinea", "Guyana", "Montenegro", "Bahrain", "Switzerland", "Luxembourg", "Iceland", "Fiji", "New Caledonia", "Monaco", "Bhutan", 
+    "Swaziland", "French Guiana", "Bermuda", "Brunei", "Isle Of Man", "Aruba", "Trinidad And Tobago", "Jersey", "Gambia", "Turkmenistan", "Seychelles", "Malta", "Andorra", "Liechtenstein", "San Marino", 
+    "Kosovo (Disputed Territory)", "Sint Maarten", "Mauritius", "El Salvador", "Puerto Rico", "Costa Rica"],
+    "labels":  ["All", "South Korea", "China", "India", "Bangladesh", "Japan", "Indonesia", "Congo", "Thailand", 
+    "Pakistan", "Egypt", "Brazil", "Mexico", "Nigeria", "Russia", "Philippines", "United States", "Turkey", "Argentina", 
+    "United Kingdom", "Iran", "France", "Vietnam", "Peru", "Angola", "Colombia", "Malaysia", "Hong Kong", "Tanzania", "Chile", 
+    "Saudi Arabia", "Iraq", "Spain", "Sudan", "Kenya", "Canada", "Singapore", "Ivory Coast", "Australia", "South Africa", "Morocco", 
+    "Afghanistan", "Jordan", "Germany", "Algeria", "Ethiopia", "Kuwait", "Yemen", "Italy", "Guatemala", "Ukraine", "Taiwan", "Ecuador", 
+    "Bolivia", "Madagascar", "Dominican Republic", "United Arab Emirates", "Uzbekistan", "Cameroon", "Burkina Faso", "Ghana", "Azerbaijan", 
+    "Cuba", "Zimbabwe", "Cambodia", "Somalia", "Belarus", "Venezuela", "Kazakhstan", "Austria", "Syria", "Romania", "Belgium", "Poland", "Hungary", 
+    "Uganda", "Oman", "Mongolia", "Serbia", "New Zealand", "Czech Republic", "Uruguay", "Bulgaria", "Mozambique", "Qatar", "Senegal", "Rwanda", "Libya", 
+    "Honduras", "Georgia", "Denmark", "Armenia", "Kyrgyzstan", "Mauritania", "Tunisia", "Nepal", "Nicaragua", "Niger", "Liberia", "Sweden", "Israel", "Laos", 
+    "Croatia", "Sri Lanka", "Malawi", "Tajikistan", "Netherlands", "Togo", "Gabon", "Finland", "Panama", "Greece", "Norway", "North Macedonia", "Moldova", "Burundi", 
+    "Latvia", "Jamaica", "Lithuania", "Ireland", "Estonia", "Paraguay", "Portugal", "Lebanon", "Albania", "Slovakia", "Namibia", "Cyprus", "Bahamas", "Slovenia", "Bosnia And Herzegovina", 
+    "Maldives", "Suriname", "Botswana", "Gibraltar", "Papua New Guinea", "Guyana", "Montenegro", "Bahrain", "Switzerland", "Luxembourg", "Iceland", "Fiji", "New Caledonia", "Monaco", "Bhutan", 
+    "Swaziland", "French Guiana", "Bermuda", "Brunei", "Isle Of Man", "Aruba", "Trinidad And Tobago", "Jersey", "Gambia", "Turkmenistan", "Seychelles", "Malta", "Andorra", "Liechtenstein", "San Marino", 
+    "Kosovo (Disputed Territory)", "Sint Maarten", "Mauritius", "El Salvador", "Puerto Rico", "Costa Rica"],
+    "name": "Country selection"}
+  }],
 
-      "transform": [
-        {
-          "filter": {
-            "param": "Country Selection"
-          }
+    "transform": [
+      {
+        "filter": {
+          "param": "Country Selection"
         }
+      }
+    ],
+
+  "layer": [
+    {"mark": {"type": "circle", "size": 80, "color": "orange"},
+
+  "encoding": {
+  "x": { "field": "Average monthly net salary", "type": "quantitative", "title": "Average monthly net salary (USD)", "sort": "ascending"},
+
+  "y": {"field": "Apt Center", 
+          "type": "quantitative", "title": "House price per meter square (USD)"},
+
+  "tooltip": [
+        {"field": "Country", "type": "nominal"},
+        {"field": "City", "type": "nominal"},
+        {"field": "Average monthly net salary", "format": ".2f",
+          "type": "quantitative"},
+        {"field": "in_monthly_approx_spend", "type": "quantitative", "format": ".2f",
+        "title":"Approximate monthly expenses (USD)"},
+        {"field": "Apt Center", "type": "quantitative", "format": ".2f",
+        "title":"House price per meter square (USD)"}
       ],
+  "size": {"field": "in_monthly_approx_spend", "type": "quantitative", "title": "Approximate monthly expenses (USD)"}
+  }}],
 
-    "layer":[{"mark": {"type": "circle", "size": 80, "color": "orange"},
-
-    "encoding": {
-    "x": { "field": "Average monthly net salary", "type": "quantitative", "title": "Average monthly net salary (USD)", "sort": "ascending"},
-
-    "y": {"field": "Apt Center", 
-            "type": "quantitative", "title": "House price per meter square (USD)"},
-
-    "tooltip": [
-          {"field": "Country", "type": "nominal"},
-          {"field": "City", "type": "nominal"},
-          {"field": "Average monthly net salary", 
-            "type": "quantitative"},
-          {"field": "in_monthly_approx_spend", "type": "quantitative", 
-          "title":"Approximate monthly expenses (USD)"},
-          {"field": "Apt Center", "type": "quantitative", 
-          "title":"House price per meter square (USD)"}
-        ],
-    "size": {"field": "in_monthly_approx_spend", "type": "quantitative", "title": "Approximate monthly expenses (USD)"}
-    },
-
-    "config": {
-        "axis": {
-          "labelFont": "Arial", 
-          "labelFontSize": 14,
-          "titleFontSize": 16,  
-          "labelFontWeight": "normal", 
-          "labelAngle": 0
-        },
-        "title": {
-          "font": "Arial", 
-          "fontSize": 21,   
-          "fontWeight": "bold" 
-        }}
-    },
-  {
-    "mark": {"type": "text"}
-  }]
+  "config": {
+      "axis": {
+        "labelFont": "Arial", 
+        "labelFontSize": 14,
+        "titleFontSize": 16,  
+        "labelFontWeight": "normal", 
+        "labelAngle": 0
+      },
+      "title": {
+        "font": "Arial", 
+        "fontSize": 21,   
+        "fontWeight": "bold" 
+      }}
   }
