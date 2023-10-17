@@ -10,6 +10,34 @@
     "layer": [
       {
         "data": {
+          "url": "https://raw.githubusercontent.com/ChinBoon22/FIT3179_Homework/main/Dataset/ne_110m.json",
+          "format": {
+            "type": "topojson",
+            "feature": "ne_110m_admin_0_countries"
+          }
+        },
+        "transform": [
+          {
+            "calculate": "'Data is not available in ' + datum.properties.NAME",
+            "as": "note"
+          }
+        ],
+        "mark": {
+          "type": "geoshape",
+          "stroke": "white",
+          "strokeDash": [1, 1],
+          "fill": "#D3D3D3"
+        },
+        "encoding": {
+          "color": {
+            "value": "#D3D3D3"
+          },
+          "tooltip": { "field": "note" }
+        }
+      },
+      
+      {
+        "data": {
           "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
           "format": {"type": "topojson", "feature": "oceans"}
         },
@@ -30,12 +58,13 @@
             "feature": "ne_110m_admin_0_countries"
           }
         },
+
         "transform": [
           {
             "lookup": "properties.NAME",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/main/living_cost.csv"
+                "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/main/COL_aggregated.csv"
               },
               "key": "Country",
               "fields": ["McMeal"]
@@ -48,7 +77,7 @@
             "field": "McMeal", 
             "type": "quantitative",
             "scale": {
-              "scheme": "viridis"
+              "scheme": "orangered"
             },
             "title": "McMeal price (USD)"
           },

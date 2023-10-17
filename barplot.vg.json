@@ -1,41 +1,57 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 400,
-    "background": "ghostwhite",
-    "title": { "text": "City that people could buy a house in 50 years of working" },
-    "data": {
-      "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/main/Cost_of_living.csv"
-    },
-    "mark": { "type": "bar", "size": 80, "color": "orange" },
-    "transform": [
-      {
-        "calculate": "datum.Apt_Center * 1950 / (datum.Average_monthly_net_salary - datum.in_monthly_approx_spend)",
-        "as": "num"
-      },
-      {"filter": "datum.num >= 1 && datum.num <= 600"}
-    ],
-    "encoding": {
-      "x": { "field": "City", "type": "nominal", "title": "Cities", "sort": "descending" },
-      "y": { "field": "num", "type": "quantitative", "title": "Number of months" },
-      "tooltip": [
-        { "field": "Country", "type": "nominal" },
-        { "field": "City", "type": "nominal" },
-        { "field": "Average_monthly_net_salary", "type": "quantitative" }
-      ]
-    },
-    "config": {
-      "axis": {
-        "labelFont": "Arial",
-        "labelFontSize": 14,
-        "titleFontSize": 16,
-        "labelFontWeight": "normal"
-      },
-      "title": {
-        "font": "Arial",
-        "fontSize": 21,
-        "fontWeight": "bold"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "background": "ghostwhite",
+  "title": { "text": "City that people could buy a house within 100 years of working" },
+  "data": {
+    "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/main/Cost_of_living.csv"
+  },
+  "mark": { "type": "bar", "color": "orange" },
+  "params": [
+    {
+      "name": "max_year",
+      "value": 33,
+      "bind": {
+        "input": "range",
+        "min": 33,
+        "max": 100,
+        "step": 1,
+        "name": "Maximum number of years"
       }
     }
+  ],
+  "transform": [
+    {
+      "calculate": "datum.Apt_Center * 1950 / (datum.Average_monthly_net_salary - datum.in_monthly_approx_spend)/12",
+      "as": "num"
+    },
+    {"filter": "datum.num >= 32 && datum.num <= max_year"}
+  ],
+  "encoding": {
+    "x": { "field": "City", "type": "nominal", "title": "Cities", "sort": "y" },
+    "y": { "field": "num", "type": "quantitative", "title": "Number of months" },
+    "tooltip": [
+      { "field": "Country", "type": "nominal" },
+      { "field": "City", "type": "nominal" },
+      {"field": "num", "type": "quantitative", "title": "Number of months"},
+      { "field": "Average_monthly_net_salary", "type": "quantitative" }
+    ]
+  },
+  "config": {
+    "axis": {
+      "labelFont": "Arial",
+      "labelFontSize": 12,
+      "titleFontSize": 16,
+      "labelFontWeight": "normal"
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 21,
+      "fontWeight": "bold"
+    }
   }
+}
+
+  
   
