@@ -7,7 +7,7 @@
     "data": {
     "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/54f368ef5f68756e95231589b13eda714a07212b/Cost_of_living.csv"
     },
-    "mark": {"type": "boxplot", "size": 80, "color": "orange"},
+    "layer":[{    "mark": {"type": "boxplot", "size": 80, "color": "orange"},
     "encoding": {
     "x": { "field": "Country", "type": "nominal", "title": "Countries", "sort": "y"},
     "y": {"field": "Average monthly net salary", 
@@ -33,4 +33,36 @@
           "fontSize": 21,
           "fontWeight": "bold" 
         }}
+      },
+      { "data": {
+        "values": [
+          {
+            "Country": "China",
+            "value": 2100,
+            "label": "Nantung offers highest salary "
+          },
+          {
+            "Country": "China",
+            "value": 1800,
+            "label": "on average in China"
+          }
+        ]
+        },
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "middle",
+          "dx": 5,
+          "dy": 25,
+          "fontSize": 13,
+          "fontWeight": "bold",
+          "fill":"navy"
+        },
+        "encoding": {
+          "x": { "field": "Country", "type": "nominal" },
+          "y": { "field": "value", "type": "quantitative" },
+          "text": { "field": "label", "type": "nominal" }
+        }}
+    ]
+
     }
