@@ -30,11 +30,11 @@
   ],
   "encoding": {
     "x": { "field": "City", "type": "nominal", "title": "Cities", "sort": "y" },
-    "y": { "field": "num", "type": "quantitative", "title": "Number of months" },
+    "y": { "field": "num", "type": "quantitative", "title": "Number of years" },
     "tooltip": [
       { "field": "Country", "type": "nominal" },
       { "field": "City", "type": "nominal" },
-      {"field": "num", "type": "quantitative", "title": "Number of months"},
+      {"field": "num", "type": "quantitative", "title": "Number of years"},
       { "field": "Average_monthly_net_salary", "type": "quantitative" }
     ]
   },
