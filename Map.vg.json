@@ -10,7 +10,7 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/ChinBoon22/FIT3179_Homework/main/Dataset/ne_110m.json",
+          "url": "https://raw.githubusercontent.com/AndyIsHigh/FIT3179_A2/53d66847c2f199fb19985a0d736f10e91938748b/ne_110m_admin_0_countries.json",
           "format": {
             "type": "topojson",
             "feature": "ne_110m_admin_0_countries"
@@ -35,7 +35,7 @@
           "tooltip": { "field": "note" }
         }
       },
-      
+
       {
         "data": {
           "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
